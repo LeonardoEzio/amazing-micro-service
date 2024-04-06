@@ -1,0 +1,20 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: test-integration-service
+
+xxl:
+  job:
+    enable: true
+    userName: admin
+    password: 123456
+    accessToken: 4c4da397-1f28-4592-8409-6a191177ee05
+    admin:
+      addresses: http://192.168.31.63:8080/xxl-job-admin
+    executor:
+      ip: 192.168.31.184
+      port: 18082
+      appName: ${spring.application.name}-executor
+      logPath: /data/applogs/xxl-job/jobhandler
+      logRetentionDays: 30
